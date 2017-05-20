@@ -1,0 +1,26 @@
+/*输入一批学生的成绩，以负数作为结束的标志，计算平均成绩，并统计不及格人数*/
+#include<stdio.h>
+int main(void)
+{
+  int count, num;
+  double grade,total;
+  num=0;
+  total=0;
+  count=0;
+  printf("Enter grades: ");
+  scanf("%lf", &grade);
+  while(grade>=0){
+      total=total+grade;
+      num++;
+      if(grade<60)
+        count++;
+        scanf("%lf", &grade);
+    }
+    if(num!=0){
+      printf("Grade average is %.2f\n", total/num);
+      printf("Number of failures is 0\n");
+    }
+    else
+        printf("Grade average is 0\n");
+     return 0;
+     }
