@@ -1,0 +1,29 @@
+#include<stdio.h>
+#include<stdlib.h>
+int main(void)
+{
+	int count=0, n, mynumber, yournumber;
+	mynumber=rand()%100+1;
+	printf("输入猜的次数: ");
+	scanf("%d", &n);
+	
+	while(yournumber!=mynumber){
+		printf("yournumber= ");
+	    scanf("%d", &yournumber);
+		if(yournumber>mynumber)
+			printf("Bigger!\n");
+		else if(yournumber<mynumber)
+			printf("Smaller!\n");
+		count++;
+	}
+	if(count==1)
+		printf("Bingo!");
+	else if((count>1)&&(count<=3))
+		printf("Lucky You!");
+	else if((count>=3)&&(count<=n))
+		printf("Good Guess!");
+	else
+		printf("Game Over!");
+	
+	return 0;
+ } 
