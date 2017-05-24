@@ -1,0 +1,22 @@
+#include<stdio.h>
+#include<math.h>
+int main(void)
+{
+	int i,m,n,t,a,sum;
+	sum=0;
+	printf("Enter two numbers: ");
+	scanf("%d%d", &m, &n);
+	if(m>=1&&n>=m&&n<=500){
+		for(t=m;t<=n;t++){
+			a=sqrt(t);
+			for(i=2;i<=a;i++)
+				if(t%i==0)
+				break;
+			if(i>a)
+				sum=sum+t;
+		}
+		printf("%d", sum);
+	}
+	printf("\n");
+	return 0;
+ } 
