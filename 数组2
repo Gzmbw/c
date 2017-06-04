@@ -1,4 +1,4 @@
-/*选择法排序*/
+/*找出数组的最小值和它对应的下标*/
 #include<stdio.h>
 int main(void)
 {
