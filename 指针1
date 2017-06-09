@@ -1,0 +1,30 @@
+/*获取密码的两种方法*/
+#include<stdio.h>
+int main(void)
+{
+	int x=5432;
+	int *p=NULL;
+	p=&x;
+	printf("If i konw the name of the varible, I can get it's value by name:%d\n", x);
+	printf("If i know the address of the varible is:%x, then i also can get it's value by address:%d\n", p, *p);
+	return 0;
+ } 
+ 
+ 
+ /*取地址运算和使用指针访问变量*/
+ #include<stdio.h>
+ int main(void)
+ {
+ 	int a=3, *p;
+ 	p=&a;
+ 	printf("a=%d, *p=%d\n", a, *p);
+ 	*p=10;
+ 	printf("a=%d, *p=%d\n", a, *p);
+ 	printf("Enter a:");
+ 	scanf("%d", &a);
+ 	printf("a=%d, *p=%d\n", a, *p);
+ 	(*p)++;
+ 	printf("a=%d, *p=%d\n", a, *p);
+ 	
+ 	return 0;
+ }
